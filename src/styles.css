@@ -39,6 +39,9 @@ body {
 .qr-header input {
     width: 100%;
     margin-block: 12px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    outline: none;
 }
 
 .qr-head input, select {
