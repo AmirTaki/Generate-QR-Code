@@ -6,12 +6,15 @@ const  sizes = document.getElementById("sizes")
 const qrContainer = document.querySelector('.qr-body')
 
 let size = sizes.value
-sizes.addEventListener('change',(event)=>{
-     size = event.target.value
-      generateQRCode()
-} )
+
+// function value.lenght (input)
+const isEmptyInput = () => {
+    (qrtText.value.length > 0) ? generateQRCode() :  window.alert('Enter the text or URL to generate your QR code')
+
+}
 
 
+//create new QR COOD
 //https://davidshimjs.github.io/qrcodejs/
 
 const generateQRCode = () => {
@@ -27,7 +30,19 @@ const generateQRCode = () => {
         // correctLevel : QRCode.CorrectLevel.H
     })
 }
-generateBtn.addEventListener('click', (eve)=> {
-    eve.preventDefault();
-    generateQRCode()
+
+sizes.addEventListener('change',(event)=>{
+    
+    size = event.target.value
+
+    isEmptyInput()
+
+} )
+
+generateBtn.addEventListener('click', (event)=> {
+    
+    event.preventDefault();
+    
+    isEmptyInput()
+
 })
