@@ -6,10 +6,15 @@ const  sizes = document.getElementById("sizes")
 const qrContainer = document.querySelector('.qr-body')
 
 let size = sizes.value
+sizes.addEventListener('change',(event)=>{
+     size = event.target.value
+      generateQRCode()
+} )
+
 
 //https://davidshimjs.github.io/qrcodejs/
+
 const generateQRCode = () => {
-    console.log(size.value)
     qrContainer.innerHTML = ''  // remove
 
     // create new QRCode
