@@ -92,3 +92,13 @@ body {
     border: .5px solid var(--secondary-color);
     border-radius: var(--border-radius);
 }
+
+@media screen and  (max-width : 520px) {
+    .box {
+        width: 80%;
+    }
+    .qr-footer a {
+        padding: 12px;
+        font-weight: 16px;
+    }
+}
