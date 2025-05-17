@@ -5,6 +5,9 @@ const  sizes = document.getElementById("sizes")
 
 const qrContainer = document.querySelector('.qr-body')
 
+let size = sizes.value
+
+//https://davidshimjs.github.io/qrcodejs/
 const generateQRCode = () => {
     new QRCode (qrContainer , {
         text : qrtText.value,
@@ -12,10 +15,11 @@ const generateQRCode = () => {
         height: size,
         colorDark : "#000000",
         colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
+        // correctLevel : QRCode.CorrectLevel.H
     })
 }
 generateBtn.addEventListener('click', (eve)=> {
     eve.preventDefault();
+    console.log('ok')
     generateQRCode()
 })
