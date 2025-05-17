@@ -9,6 +9,10 @@ let size = sizes.value
 
 //https://davidshimjs.github.io/qrcodejs/
 const generateQRCode = () => {
+    console.log(size.value)
+    qrContainer.innerHTML = ''  // remove
+
+    // create new QRCode
     new QRCode (qrContainer , {
         text : qrtText.value,
         width: size,
@@ -20,6 +24,5 @@ const generateQRCode = () => {
 }
 generateBtn.addEventListener('click', (eve)=> {
     eve.preventDefault();
-    console.log('ok')
     generateQRCode()
 })

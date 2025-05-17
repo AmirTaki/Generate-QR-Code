@@ -78,3 +78,9 @@ body {
     font-weight: 600;
     border-radius: var(--border-radius);
 }
+
+.qr-body {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
